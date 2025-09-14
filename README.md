@@ -81,7 +81,7 @@ It uses:
 - **scikit-learn’s cosine similarity** for fingerprint comparison.  
 - **Flask** to serve the verification API.  
 
-![Fingerprint verification logic.](/ss/Screenshot 2025-08-25 215749.png)  
+![Fingerprint verification logic.](/ss/Screenshot.png)  
 
 ---
 
