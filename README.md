@@ -2,8 +2,17 @@
 
 A **PHP + MySQL** project for capturing and verifying fingerprints with the **Digital Persona U.are.U 4500 scanner**.  
 This system features secure enrollment, template storage, and verification for authentication systems such as **student bio-data registration, attendance, exams, banking, and access control**.  
+By: Marcellinus Atampugre Azuwana
+Email for support: atampugremarcellinus@gmail.com
 
+## FOR SERVICE
+Integration: $350
+Integration Coaching: $300
+For Full Features including the docs of this project.
+This was a university final year project + Report
+Cost: $550
 ---
+![Digital Persona U.are.U 4500 USB Fingerprint Reader.](/ss/41oK3JuBxOL.jpg)   
 
 ## 🔑 Admin Login  
 
