@@ -3,12 +3,19 @@ A PHP + MySQL project for capturing and verifying fingerprints with the Digital 
 
 
 
-![Screenshot of the Login Interface.](/ss/1.png)
-##The Above is the login interface for the system admin. This Part is running on apache server. Xampp with PHP + Mysqli
+![Screenshot of the Login Interface.](/ss/3.png)
+The Above is the login interface for the system admin. This Part is running on apache server. Xampp with PHP + Mysqli
 
 
-![Screenshot of the Login Interface.](/ss/2.png)
+![Admin Dashboard Interface.](/ss/4.png)
+The Admin Dashboard
 
+
+![Manage Programme Interface.](/ss/5.png)
+This section, the admin can add new programmes, edit, delete and update programmes into the system
+
+
+![Manage Courses Interface.](/ss/9.png)
 
 
 
