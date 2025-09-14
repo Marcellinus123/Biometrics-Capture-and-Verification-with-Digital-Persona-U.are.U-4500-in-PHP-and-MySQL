@@ -1,6 +1,15 @@
 # Biometrics-Capture-and-Verification-with-Digital-Persona-U.are.U-4500-in-PHP-and-MySQL
 A PHP + MySQL project for capturing and verifying fingerprints with the Digital Persona U.are.U 4500 scanner. Features secure enrollment, template storage, and verification for authentication systems such as attendance, exams, banking, and access control.
 
+
+
+
+
+
+
+
+
+
 This system was developed to provide a reliable solution for capturing and verifying students’ biometric data using the Digital Persona U.are.U 4500 fingerprint scanner. The main purpose is to ensure accurate bio-data registration and verification of students at the beginning of every semester, which can then be reused for attendance taking, exam verification, and other academic-related authentications. By leveraging biometrics, the system eliminates impersonation and strengthens trust in student identity management.
 
 The platform is built with PHP and MySQL as its core technologies, providing an admin dashboard where administrators can securely log in and manage student records. The admin has full CRUD (Create, Read, Update, Delete) capabilities for student data, ensuring that all bio-data remains accurate and up to date. Once student records are prepared, administrators can move to the enrollment phase where fingerprint data is captured directly from the U.are.U 4500 scanner. Each fingerprint template is linked to the student’s profile and stored securely in the database for future use.
