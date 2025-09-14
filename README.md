@@ -17,6 +17,17 @@ This section, the admin can add new programmes, edit, delete and update programm
 
 ![Manage Courses Interface.](/ss/9.png)
 
+The admin can add new courses, edit and update existing courses records in the system.
+
+![Manage Lecturers Interface.](/ss/11.png)
+The admin adds lecturers, edit and can update the lecturer data. During this process, the admin can again assign courses to lecturers.
+
+
+![Manage Students Interface.](/ss/14.png)
+This is the most crucial part of the system. Here, the admin adds a new student, can also update existing student records. The admin only register the student details if not exist in the database. This section, the fingerprint capturing is not need. This part needs to be done before the admin can proceed to the fingerprint enrollment section.
+
+![Students List Interface.](/ss/16.png)
+
 
 
 
