@@ -3,7 +3,7 @@ A PHP + MySQL project for capturing and verifying fingerprints with the Digital 
 
 
 
-
+![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](/ss/1.png)
 
 
 
