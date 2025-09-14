@@ -1,0 +1,12 @@
+Options -Indexes
+
+RewriteEngine On
+
+ErrorDocument 404 http://localhost/bioattend
+ErrorDocument 403 http://localhost/bioattend
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteCond %{REQUEST_URI} ^/index\.php$ [NC]  
+RewriteRule ^(.*)$ http://localhost/bioattend/[R=301,L]
