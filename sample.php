@@ -20,7 +20,8 @@ if (!$conn) {
 }
 
 // Your Gemini API Key - Replace with your actual key
-define('GEMINI_API_KEY', 'AIzaSyBcgIfMQIv3_k8WHGFOmILuWZCmQYRVn08');
+//Here are no more using this. This only used to test the possibilities of gemini model
+define('GEMINI_API_KEY', 'YOUR-API-KEY');
 
 // Function to get all student fingerprints from database
 function getStudentFingerprints($conn) {
@@ -249,3 +250,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 ?>
+
