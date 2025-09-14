@@ -29,6 +29,14 @@ This is the most crucial part of the system. Here, the admin adds a new student,
 ![Students List Interface.](/ss/16.png)
 
 
+## Finger Print Enrollment Section.
+This phase was the backbone of the system. 
+The Admin Needs to connect the Digital Persona U.are.U 4500 fingerprint scanner onto their laptop/desktop USB port. Where the the scanner Web SDK version was provided by the manufacturer. It's important to note that, this SDK only provides capturing capabilities, no verification.
+After installing the Web SDK, the admin connects to the pc, then goto the interface responsible for capturing the students fingerprint in our project. Select a student and enroll a single finger of the student, and that process is done. If fingerpint sensor not connected, the interface throws an error as showned below.
+
+![Students List Interface.](/ss/bio1.png)
+
+
 
 
 This system was developed to provide a reliable solution for capturing and verifying students’ biometric data using the Digital Persona U.are.U 4500 fingerprint scanner. The main purpose is to ensure accurate bio-data registration and verification of students at the beginning of every semester, which can then be reused for attendance taking, exam verification, and other academic-related authentications. By leveraging biometrics, the system eliminates impersonation and strengthens trust in student identity management.
