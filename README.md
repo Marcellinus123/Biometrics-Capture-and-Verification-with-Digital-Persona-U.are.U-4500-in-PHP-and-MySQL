@@ -1,54 +1,129 @@
-# Biometrics-Capture-and-Verification-with-Digital-Persona-U.are.U-4500-in-PHP-and-MySQL
-A PHP + MySQL project for capturing and verifying fingerprints with the Digital Persona U.are.U 4500 scanner. Features secure enrollment, template storage, and verification for authentication systems such as attendance, exams, banking, and access control.
+# Biometrics-Capture-and-Verification-with-Digital-Persona-U.are.U-4500-in-PHP-and-MySQL  
 
+A **PHP + MySQL** project for capturing and verifying fingerprints with the **Digital Persona U.are.U 4500 scanner**.  
+This system features secure enrollment, template storage, and verification for authentication systems such as **student bio-data registration, attendance, exams, banking, and access control**.  
 
+---
 
-![Screenshot of the Login Interface.](/ss/3.png)
-The Above is the login interface for the system admin. This Part is running on apache server. Xampp with PHP + Mysqli
+## 🔑 Admin Login  
 
+![Screenshot of the Login Interface.](/ss/3.png)  
+The login interface for system administrators. This part runs on an Apache server (XAMPP with PHP + MySQLi).  
 
-![Admin Dashboard Interface.](/ss/4.png)
-The Admin Dashboard
+![Admin Dashboard Interface.](/ss/4.png)  
+The admin dashboard where all operations begin.  
 
+---
 
-![Manage Programme Interface.](/ss/5.png)
-This section, the admin can add new programmes, edit, delete and update programmes into the system
+## 🏫 Managing Academic Data  
 
+![Manage Programme Interface.](/ss/5.png)  
+Admins can add, edit, update, and delete programs.  
 
-![Manage Courses Interface.](/ss/9.png)
+![Manage Courses Interface.](/ss/9.png)  
+Admins can manage courses, including creating, editing, and updating records.  
 
-The admin can add new courses, edit and update existing courses records in the system.
+![Manage Lecturers Interface.](/ss/11.png)  
+Admins add lecturer records and assign courses.  
 
-![Manage Lecturers Interface.](/ss/11.png)
-The admin adds lecturers, edit and can update the lecturer data. During this process, the admin can again assign courses to lecturers.
+![Manage Students Interface.](/ss/14.png)  
+The student management module. Admins add or update student records here.  
+👉 **Note:** Fingerprint enrollment happens only after the student is registered.  
 
+![Students List Interface.](/ss/16.png)  
 
-![Manage Students Interface.](/ss/14.png)
-This is the most crucial part of the system. Here, the admin adds a new student, can also update existing student records. The admin only register the student details if not exist in the database. This section, the fingerprint capturing is not need. This part needs to be done before the admin can proceed to the fingerprint enrollment section.
+---
 
-![Students List Interface.](/ss/16.png)
+## 🖐️ Fingerprint Enrollment  
 
+This section is the backbone of the system.  
 
-## Finger Print Enrollment Section.
-This phase was the backbone of the system. 
-The Admin Needs to connect the Digital Persona U.are.U 4500 fingerprint scanner onto their laptop/desktop USB port. Where the the scanner Web SDK version was provided by the manufacturer. It's important to note that, this SDK only provides capturing capabilities, no verification.
-After installing the Web SDK, the admin connects to the pc, then goto the interface responsible for capturing the students fingerprint in our project. Select a student and enroll a single finger of the student, and that process is done. If fingerpint sensor not connected, the interface throws an error as showned below.
+The administrator connects the **Digital Persona U.are.U 4500 fingerprint scanner** via USB. The manufacturer’s Web SDK allows fingerprint **capture** but does not provide **verification**. After installing the SDK, the admin can enroll fingerprints directly into the system.  
 
-![Students List Interface.](/ss/bio1.png)
+The process:  
+1. Select a student from the system.  
+2. Place the student’s finger on the scanner.  
+3. Capture and save the fingerprint template.  
+4. The template is stored securely in the database as a PNG.  
 
+If the scanner is not connected, the system throws an error.  
 
+![Fingerprint enrollment interface.](/ss/bio1.png)  
+No scanner connected.  
 
+![Fingerprint enrollment interface.](/ss/bio2.png)  
+Scanner successfully detected.  
 
-This system was developed to provide a reliable solution for capturing and verifying students’ biometric data using the Digital Persona U.are.U 4500 fingerprint scanner. The main purpose is to ensure accurate bio-data registration and verification of students at the beginning of every semester, which can then be reused for attendance taking, exam verification, and other academic-related authentications. By leveraging biometrics, the system eliminates impersonation and strengthens trust in student identity management.
+![Fingerprint enrollment interface.](/ss/bio3.png)  
+Prompt to place a finger on the scanner.  
 
-The platform is built with PHP and MySQL as its core technologies, providing an admin dashboard where administrators can securely log in and manage student records. The admin has full CRUD (Create, Read, Update, Delete) capabilities for student data, ensuring that all bio-data remains accurate and up to date. Once student records are prepared, administrators can move to the enrollment phase where fingerprint data is captured directly from the U.are.U 4500 scanner. Each fingerprint template is linked to the student’s profile and stored securely in the database for future use.
+![Fingerprint enrollment interface.](/ss/bio4.png)  
+Fingerprint captured.  
 
-During verification, students simply place their finger on the scanner, and the system compares the captured template with the stored record. If a match is found, the system confirms the student’s identity. This verification step is crucial during high-stakes activities such as examinations and semester registrations, where preventing impersonation is a top priority. The same process can also be extended to classroom attendance, automatically marking students present when their fingerprint is successfully verified.
+![Fingerprint enrollment interface.](/ss/bio5.png)  
+Captured template saved to the database.  
 
-One major limitation of the U.are.U 4500 is that while it provides fingerprint capture functionality, the manufacturer did not provide a built-in verification system. To address this, we integrated a custom fingerprint matching module written in Python, which runs as a Flask-based API service. The PHP application communicates with this Python service whenever a fingerprint needs to be verified.
+---
 
-The Python backend uses several important libraries and algorithms to handle the verification process. OpenCV (cv2) is used for image preprocessing, NumPy provides efficient matrix operations, and scikit-learn’s cosine similarity is employed to measure the closeness between fingerprint templates. Fingerprint images are converted into feature vectors and compared with stored templates in the MySQL database. A similarity score is then calculated, and if it exceeds the threshold, the fingerprint is considered a match. The entire process is designed to be efficient, secure, and reliable.
+## 🔍 Fingerprint Verification  
 
-By combining PHP for data management, MySQL for secure storage, and Python with Flask for fingerprint verification, this project delivers a robust biometric solution that can be adapted to multiple real-world use cases. While it was originally built for student bio-data management in universities, the same approach can easily be applied in other fields such as employee attendance tracking, secure building access, or financial services authentication.
+The **main challenge** was integrating fingerprint verification inside the browser.  
+Since the original Web SDK from Digital Persona does **not provide verification or matching**, we implemented our own algorithm in **Python**, served via a **Flask API**.  
 
-This project demonstrates how cross-technology integration can bridge the gaps left by hardware manufacturers and deliver a complete end-to-end biometric solution. It ensures that institutions can confidently verify identities and streamline their processes without relying solely on traditional methods like ID cards, which can be forged or misused.
+The PHP application captures a fingerprint, sends it to the Flask server, and waits for a verification response. If a match is found, the server queries the MySQL database and returns the associated student data.  
+
+### Python Fingerprint Matching  
+
+The file `finger_clean.py` handles all fingerprint matching logic.  
+It uses:  
+- **OpenCV (cv2)** for image preprocessing.  
+- **NumPy** for efficient matrix operations.  
+- **scikit-learn’s cosine similarity** for fingerprint comparison.  
+- **Flask** to serve the verification API.  
+
+![Fingerprint verification logic.](/ss/Screenshot 2025-08-25 215749.png)  
+
+---
+
+## 🌐 System Architecture  
+
+This project requires **two servers** running simultaneously:  
+1. **XAMPP/Apache** → Handles PHP + MySQL.  
+2. **Python Flask API** → Handles fingerprint verification (`finger_clean.py`).  
+
+![Fingerprint verification servers.](/ss/server.png)  
+![Fingerprint verification servers.](/ss/server2.png)  
+
+---
+
+## 🔄 Verification Workflow  
+
+1. A student places their finger on the scanner.  
+2. The system captures a new fingerprint template.  
+3. The captured fingerprint is sent via API request to the Flask server (running on port 5000).  
+4. The Flask server compares the fingerprint against stored templates in MySQL.  
+5. If a match is found, the server returns the associated student record.  
+
+![Fingerprint verification Interface.](/ss/veri2.png)  
+Captured fingerprint ready for verification.  
+
+![Fingerprint verification Interface.](/ss/veri3.png)  
+Successful match response from the Flask server.  
+
+---
+
+## 📖 Project Description  
+
+This system was developed to provide a reliable solution for capturing and verifying student biometric data using the Digital Persona U.are.U 4500 fingerprint scanner. Its primary purpose is **accurate bio-data registration and verification of students each semester**, ensuring that identity checks during **attendance, examinations, and other academic processes** are free from impersonation.  
+
+The platform is built with **PHP and MySQL**, providing an admin dashboard where administrators can securely log in and manage student records. Once student records are created, administrators move to the enrollment phase, where fingerprint data is captured directly from the scanner and stored in the database.  
+
+During verification, students simply place their finger on the scanner, and the system compares the captured template with the stored record. If a match is found, the student’s identity is confirmed. This workflow is particularly critical during examinations and semester registrations.  
+
+Since the U.are.U 4500 scanner lacks a built-in verification endpoint, we developed a **custom fingerprint verification system in Python with Flask**. This Python service leverages **OpenCV, NumPy, and cosine similarity** to compare fingerprints and ensure accurate matches.  
+
+By combining **PHP (data management)**, **MySQL (storage)**, and **Python Flask (verification)**, this project delivers a **complete end-to-end biometric solution**. While originally designed for student bio-data management, it can also be extended to **employee attendance systems, building access control, and financial services authentication**.  
+
+This project showcases how **cross-technology integration** can bridge gaps left by hardware manufacturers and deliver a **scalable, secure, and reliable biometric verification system**.  
+
+---
