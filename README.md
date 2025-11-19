@@ -150,5 +150,3 @@ This project showcases how **cross-technology integration** can bridge gaps left
 
 NOTE: When you download this project, make sure to check the requirements.txt file, also make sure you go through all the Readme files. 
 
-If this uploaded work not working, download from here.
-https://mega.nz/file/jBsBADLA#_-skfqOuMHMUyyjVf9mxR_SlaKgHa1Z1MsZcu-fB-p0
