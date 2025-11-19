@@ -16,6 +16,7 @@ This was a university final year project + Report
 
 ## 🔑 Admin Login  
 
+1. Step 1
 ![Screenshot of the Login Interface.](/ss/3.png)  
 The login interface for system administrators. This part runs on an Apache server (XAMPP with PHP + MySQLi).  
 
@@ -25,20 +26,24 @@ The admin dashboard where all operations begin.
 ---
 
 ## 🏫 Managing Academic Data  
-
+2. Step 2
 ![Manage Programme Interface.](/ss/5.png)  
 Admins can add, edit, update, and delete programs.  
 
+3. Step 3
 ![Manage Courses Interface.](/ss/9.png)  
 Admins can manage courses, including creating, editing, and updating records.  
 
+4. Step 4
 ![Manage Lecturers Interface.](/ss/11.png)  
 Admins add lecturer records and assign courses.  
 
+5. Step 5
 ![Manage Students Interface.](/ss/14.png)  
 The student management module. Admins add or update student records here.  
 👉 **Note:** Fingerprint enrollment happens only after the student is registered.  
 
+6. Step 6
 ![Students List Interface.](/ss/16.png)  
 
 ---
@@ -57,18 +62,23 @@ The process:
 
 If the scanner is not connected, the system throws an error.  
 
+7. Step 7
 ![Fingerprint enrollment interface.](/ss/bio1.png)  
 No scanner connected.  
 
+8. Step 8
 ![Fingerprint enrollment interface.](/ss/bio2.png)  
 Scanner successfully detected.  
 
+8. Step 8
 ![Fingerprint enrollment interface.](/ss/bio3.png)  
 Prompt to place a finger on the scanner.  
 
+9. Step 9
 ![Fingerprint enrollment interface.](/ss/bio4.png)  
 Fingerprint captured.  
 
+10. Step 10
 ![Fingerprint enrollment interface.](/ss/bio5.png)  
 Captured template saved to the database.  
 
@@ -90,6 +100,7 @@ It uses:
 - **scikit-learn’s cosine similarity** for fingerprint comparison.  
 - **Flask** to serve the verification API.  
 
+11. Step 11
 ![Fingerprint verification logic.](/ss/Screenshot.png)  
 
 ---
